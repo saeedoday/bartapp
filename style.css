@@ -1,0 +1,33 @@
+body { 
+    background-color: #1E1E1E;
+    color: white;
+    font-family: sans-serif;
+}
+
+#title-bar {
+    margin: 25px auto 25px auto;
+    text-align: center;
+
+}
+
+#bartlogo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#title {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+#submit {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#stationSelector { 
+    padding: 10px 50px 10px 50px;
+}
+
+/* Modal */
