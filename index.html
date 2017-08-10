@@ -1,21 +1,65 @@
 <html>
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/stations.json"></script>
-    <script src="/script.js"></script>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/stations.json"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/script.js"></script>
+    </head>
 
     
     <body>
         <div id="title-bar">
             <img id="bartlogo" src="/bart-logo.png" height="45px"/>
-            <h1 id="title">Hello World</hi>
+            <h1 id="title">Hello World!</hi>
         </div>
+
+    <!-- Trigger the modal with a button -->
+    <div id="station-modal">
+        <button type="button" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;
+                    </button>
+                    <h4 class="modal-title">Departing From...</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                <div class="container">
+                    <div id="stationSelect">
+                        <label class="radio-inline">
+                            <input type="radio" name="optradio" class="radio-inline" onclick="testFunction(this.id);" id="16th">16th & Mission
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="optradio" data-dismiss="modal" class="radio-inline" onclick="testFunction(this.id);" id="embr">Embarcadero
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="optradio" data-dismiss="modal" class="radio-inline" onclick="testFunction(this.id);" id="phil">Pleasant Hill
+                        </label>
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
     
         
         <div id="submit">
             <button id="stationSelector" onclick="testFunction()">Hi</button>
         </div>
-        
 
     </body>
 
