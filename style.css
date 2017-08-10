@@ -1,5 +1,5 @@
 body { 
-    background-color: #1E1E1E;
+    background-color: #1E1E1E !important;
     color: white;
     font-family: sans-serif;
 }
@@ -7,7 +7,10 @@ body {
 #title-bar {
     margin: 25px auto 25px auto;
     text-align: center;
+}
 
+h1 {
+    color: white !important;
 }
 
 #bartlogo {
@@ -26,8 +29,10 @@ body {
     margin-top: 50px;
 }
 
-#stationSelector { 
-    padding: 10px 50px 10px 50px;
+#station-modal {
+    text-align: center;
 }
 
-/* Modal */
+button { 
+    padding: 10px 50px 10px 50px;
+}

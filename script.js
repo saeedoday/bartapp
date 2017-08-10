@@ -21,8 +21,8 @@ function getEstimate(callback) {
 }
 
 // Use abbr variable to get estimate data for specified station
-function testFunction() {
-  stationAbbr = 'embr';
+function testFunction(id) {
+  stationAbbr = id; // This is the value I want to change
   console.log(stationAbbr);
 
   getEstimate(function (estimate, stationAbbr) {
