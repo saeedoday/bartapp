@@ -1,19 +1,20 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="/style.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/stations.json"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="/script.js"></script>
-    </head>
 
-    
-    <body>
-        <div id="title-bar">
-            <img id="bartlogo" src="/bart-logo.png" height="45px"/>
-            <h1 id="title">Hello World!</hi>
-        </div>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/stations.json"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</head>
+
+
+<body>
+    <div id="title-bar">
+        <img id="bartlogo" src="/bart-logo.png" height="45px" />
+        <h1 id="title">This is things</h1>
+    </div>
 
     <!-- Trigger the modal with a button -->
     <div id="station-modal">
@@ -24,7 +25,7 @@
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
-        <!-- Modal content-->
+            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;
@@ -33,34 +34,87 @@
                 </div>
                 <div class="modal-body">
                     <p>Some text in the modal.</p>
-                <div class="container">
-                    <div id="stationSelect">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" class="radio-inline" onclick="testFunction(this.id);" id="16th">16th & Mission
+                    <div class="container">
+                        <div id="stationSelect">
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" data-dismiss="modal" class="radio-inline" onclick="testFunction(this.id);" id="16th">16th & Mission
                         </label>
-                        <label class="radio-inline">
+                            <label class="radio-inline">
                             <input type="radio" name="optradio" data-dismiss="modal" class="radio-inline" onclick="testFunction(this.id);" id="embr">Embarcadero
                         </label>
-                        <label class="radio-inline">
+                            <label class="radio-inline">
                             <input type="radio" name="optradio" data-dismiss="modal" class="radio-inline" onclick="testFunction(this.id);" id="phil">Pleasant Hill
                         </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" data-dismiss="modal" class="radio-inline" onclick="testFunction(this.id);" id="sanl"> San Leandro
+                        </label>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- End modal -->
 
-        
-    
-        
-        <div id="submit">
-            <button id="stationSelector" onclick="testFunction()">Hi</button>
-        </div>
+    <!-- Begin dropdown -->
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Get Departure Times
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="12th" href="#">12th St./Oakland City Center</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="16th" href="#">16th St./Mission</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="19th" href="#">19th St./Oakland</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="24th" href="#">24th St./Mission</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="ashb" href="#">Ashby</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="balb" href="#">Balboa Park</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="bayf" href="#">Bay Fair</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="cast" href="#">Castro Valley</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="civc" href="#">Civic Center</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="cols" href="#">Coliseum</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="colm" href="#">Colma</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="conc" href="#">Concord</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="daly" href="#">Daly City</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="dbrk" href="#">Downtown Berkely</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="dubl" href="#">Dublin/Pleasonton</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="deln" href="#">El Cerrito del Norte</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="plza" href="#">El Cerrito Plaza</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="embr" href="#">Embarcadero</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="frmt" href="#">Fremont</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="ftvl" href="#">Fruitvale</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="glen" href="#">Glen Park</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="hayw" href="#">Hayward</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="lafy" href="#">Lafayette</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="lake" href="#">Lake Meritt</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="mcar" href="#">MacArthur</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="mlbr" href="#">Millbrae</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="mont" href="#">Montgomery St.</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="nbrk" href="#">North Berkely</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="ncon" href="#">North Concord</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="oakl" href="#">Oakland Airport</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="orin" href="#">Orinda</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="pitt" href="#">Pittsburg/Bay Point</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="phil" href="#">Pleasant Hill</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="powl" href="#">Powell St.</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="rich" href="#">Richmond</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="rock" href="#">Rockridge</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="sbrn" href="#">San Bruno</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="sfia" href="#">SFO Airport</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="sanl" href="#">San Leandro</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="shay" href="#">South Hayward</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="ssan" href="#">South San Francisco</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="ucty" href="#">Union City</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="warm" href="#">Warm Springs/South Fremont</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="wcrk" href="#">Walnut Creek</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="wdub" href="#">West Dublin</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" onclick="testFunction(this.id);" id="woak" href="#">West Oakland</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+        </ul>
+    </div>
 
-    </body>
+</body>
 
 </html>
